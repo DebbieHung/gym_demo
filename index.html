@@ -29,7 +29,11 @@
         }
 
         /* 用class定義標籤名稱，前面要加上"點" */
+        /* display預設是block(佔據一整列) */
+        /* display inline模式時padding,margin不會啟用，除非使用inline-block */
         .sub-title {
+            display: inline-block;
+            width: 400px;
             text-align: left;
             background-color: #FFE79B;
             color: #9336B4;
@@ -55,6 +59,9 @@
 
         /* body就會變更整個網頁畫面 */
         body {
+            color: white;
+            background-image: url("images/hayley-kim-studios-eot-ka5dM7Q-unsplash.jpg");
+            background-size: contain;
             background-color: #FFD0D0;
             font-family: 微軟正黑體, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
@@ -115,11 +122,14 @@
         }
 
         form {
+            background-image: url("images/javier-santos-guzman-9MR78HGoflw-unsplash.jpg");
+            background-size: cover;
             background-color: coral;
             padding: 2px 36px;
             border-radius: 30px;
             width: 60%;
             margin: 0 auto;
+            color: white;
         }
 
         /* 可以用逗號把不同標籤寫在一起 */
@@ -133,6 +143,20 @@
         button {
             border-radius: 6px;
             background-color: #DD58D6;
+        }
+
+        a {
+            color: #DD58D6;
+        }
+
+        /* 滑鼠移過去顯示的顏色 */
+        a:hover {
+            color: #F11A7B;
+        }
+
+        /* 滑鼠點擊後的顏色 */
+        a:active {
+            color: #560673;
         }
     </style>
 
@@ -160,7 +184,8 @@
         <hr>
         <!-- px=pixel, 若img的width設定為200px就會固定200px大小，不會視窗跟著縮放 -->
         <a target="_blank" href="https://unsplash.com/s/photos/gym">
-            <img width="100%" src="images/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg" alt="找不到圖片">
+            <img style="padding: 12px; background-color: black;" width="100%"
+                src="images/jonathan-borba-lrQPTQs7nQQ-unsplash.jpg" alt="找不到圖片">
         </a>
         <!-- 列表 ul & ol , ol會有數字 -->
         <!-- div + class -->
