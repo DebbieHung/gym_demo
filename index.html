@@ -57,20 +57,6 @@
             font-size: 1.3rem;
         }
 
-        /* body就會變更整個網頁畫面 */
-        body {
-            color: white;
-            background-image: url("images/hayley-kim-studios-eot-ka5dM7Q-unsplash.jpg");
-            background-size: contain;
-            background-color: #FFD0D0;
-            font-family: 微軟正黑體, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-
-        /* 整個頁面 */
-        #container {
-            padding: 1rem;
-        }
-
         .image {
             /* 圖片邊框 */
             background-color: white;
@@ -120,45 +106,9 @@
         #post-form {
             text-align: center;
         }
-
-        form {
-            background-image: url("images/javier-santos-guzman-9MR78HGoflw-unsplash.jpg");
-            background-size: cover;
-            background-color: coral;
-            padding: 2px 36px;
-            border-radius: 30px;
-            width: 60%;
-            margin: 0 auto;
-            color: white;
-        }
-
-        /* 可以用逗號把不同標籤寫在一起 */
-        input,
-        textarea,
-        label {
-            margin: 12px 0px;
-            font-size: 16px;
-        }
-
-        button {
-            border-radius: 6px;
-            background-color: #DD58D6;
-        }
-
-        a {
-            color: #DD58D6;
-        }
-
-        /* 滑鼠移過去顯示的顏色 */
-        a:hover {
-            color: #F11A7B;
-        }
-
-        /* 滑鼠點擊後的顏色 */
-        a:active {
-            color: #560673;
-        }
     </style>
+    <!-- 將共用的樣式放在style.css，再引用進來 -->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
