@@ -10,6 +10,8 @@
 const userNameEl = document.querySelector("#name");
 const heightEl = document.querySelector("#height");
 const weightEl = document.querySelector("#weight");
+const bmiEl = document.querySelector("#bmi");
+const commentEl = document.querySelector("#comment");
 
 console.log(userNameEl, heightEl, weightEl);
 
@@ -31,6 +33,41 @@ function calcBMI() {
     }
 
     let bmi = getBMI(height, weight);
-    console.log(bmi);
+    bmiEl.innerText = "BMI:" + bmi;
+
+    let comment;
+    if (bmi < 18.5) {
+        comment = "體重過輕";
+    } else if (bmi < 24) {
+        comment = "正常範圍";
+    } else if (bmi < 27) {
+        comment = "過重";
+    } else if (bmi < 30) {
+        comment = "輕度肥胖";
+    } else if (bmi < 35) {
+        comment = "中度肥胖";
+    } else {
+        comment = "重度肥胖";
+    }
+    commentEl.innerText = comment;
+
+
+    // 我原本的寫法
+    // if (bmi < 18.5) { commentEl.innerText = "體重過輕" }
+    // if (bmi < 24 && bmi >= 18.5) { commentEl.innerText = "正常範圍" }
+    // if (bmi < 27 && bmi >= 24) { commentEl.innerText = "過重" }
+    // if (bmi < 30 && bmi >= 27) { commentEl.innerText = "輕度肥胖" }
+    // if (bmi < 35 && bmi >= 30) { commentEl.innerText = "中度肥胖" }
+    // if (bmi >= 35) { commentEl.innerText = "重度肥胖" }
 
 }
+
+function clearForm() {
+    userNameEl.value = "";
+    heightEl.value = "";
+    weightEl.value = "";
+    bmiEl.innerText = "";
+    commentEl.innerText = "";
+
+}
+

@@ -10,6 +10,23 @@
         body {
             background: thistle;
         }
+
+        #bmi {
+            font-size: 32px;
+            color: gold;
+        }
+
+        #comment {
+            font-size: 24px;
+        }
+
+        #result {
+            background-color: deeppink;
+            border-radius: 25px;
+            width: 200px;
+            margin: 12px auto;
+            padding: 12px 0px;
+        }
     </style>
 
 </head>
@@ -28,9 +45,16 @@
             <input type="number" step="0.1" id="height" name="height" required><br>
             <label for="weight">體重</label>
             <input type="number" step="0.1" id="weight" name="weight" required><br>
-            <p><button type="button" onclick="calcBMI()">計算</button></p>
+            <button type="button" onclick="calcBMI()">計算</button>
+            <button type="button" onclick="clearForm()">清除</button>
             <!-- 原本type='submit'是後端用的，現在改成'button'變成是前端使用 -->
             <!-- 因此後面requierd就沒有用處，因為required是for後端使用的，要在前端自己寫程式檢查 -->
+            <div id="result">
+                <div id="bmi">
+                </div>
+                <div id="comment">
+                </div>
+            </div>
 
 
         </form>
